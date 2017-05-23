@@ -77,9 +77,6 @@ class HTTPPubSubAdapter {
   publish(channel, message) {
     let uri = this.uri + '/messages/' + channel;
     let messages = message instanceof Array ? message : [message];
-    messages = messages.map((message) => {
-      return Utils.serializeMessagePayload(message);
-    });
     return request({
       uri: uri,
       method: 'POST',
