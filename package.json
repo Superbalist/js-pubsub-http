@@ -1,6 +1,6 @@
 {
   "name": "@superbalist/js-pubsub-http",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "An HTTP adapter for the js-pubsub package.",
   "main": "lib/index.js",
   "scripts": {
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/Superbalist/js-pubsub-http#readme",
   "dependencies": {
-    "@superbalist/js-pubsub": "^2.0.0",
+    "@superbalist/js-pubsub": "^3.0.0",
     "request": "^2.81.0",
     "request-promise-native": "^1.0.4"
   },
