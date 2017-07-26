@@ -11,6 +11,9 @@ An HTTP adapter for the [js-pubsub](https://github.com/Superbalist/js-pubsub) pa
 This adapter assumes that you have a HTTP service which accepts an array of messages POSTed to a
 /messages/(channel) end-point.
 
+A server-side implementation, [js-pubsub-rest-proxy](https://github.com/Superbalist/js-pubsub-rest-proxy), is available
+as a plug and play Docker appliance.
+
 ## Installation
 
 ```bash
