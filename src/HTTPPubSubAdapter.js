@@ -1,7 +1,6 @@
 'use strict';
 
-let Utils = require('@superbalist/js-pubsub').Utils;
-let request = require('request-promise-native');
+const axios = require('axios');
 
 /**
  * @callback subscriberCallback
@@ -75,14 +74,13 @@ class HTTPPubSubAdapter {
    * });
    */
   publish(channel, message) {
-    let uri = this.uri + '/messages/' + channel;
-    let messages = message instanceof Array ? message : [message];
-    return request({
-      uri: uri,
+    const url = this.uri + '/messages/' + channel;
+    const messages = message instanceof Array ? message : [message];
+    return axios({
       method: 'POST',
-      json: true,
-      body: {
-        messages: messages,
+      url,
+      data: {
+        messages,
       },
     });
   }
